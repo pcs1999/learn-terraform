@@ -17,5 +17,8 @@ data "aws_ami" "centos8" {
 }
 
 output "publicip" {
+    #with loops
     value = aws_instance.web.*.public_ip
+    #withoutloops
+    #value = aws_instance.web.public_ip
 }
