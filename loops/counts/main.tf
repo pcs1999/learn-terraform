@@ -26,7 +26,7 @@ output "publicip" {
     #value = aws_instance.web.public_ip
 }
 
-variable "component" {
+variable "components" {
   default = ["cart", "catalogue"]
 
 }
