@@ -4,6 +4,10 @@ resource "aws_instance" "web" {
     instance_type = "t3.micro"
     tags = {
         Name = "web-centos"
+    
+    tags = {
+        Name = "web-centos123"
+
     }
   
 }
