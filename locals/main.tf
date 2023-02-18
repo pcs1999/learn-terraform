@@ -24,6 +24,6 @@ output "instance_type" {
   value = local.instance_type
 }
 
-output "instance_type1" {
+output "abc" {
   value = local.abc
 }
