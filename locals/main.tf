@@ -3,12 +3,12 @@ variable "components" {
     default = {
         cart= {
             name = "cart",
-            instance_type = "t3.micro"
+            instance_type = "t2.micro"
         }
 
         catalogue = {
             name = "catalogue",
-            instance_type = "t3.micro"
+            instance_type = "t2.micro"
 
         }
     }
@@ -17,13 +17,13 @@ variable "components" {
 
 locals {
   instance_type = {for k, v in var.components : k => v.instance_type }
-  abc = {for k, v in var.components : k => v.abc }
+  name = {for k, v in var.components : k => v.name }
 }
 
 output "instance_type" {
   value = local.instance_type
 }
 
-output "abc" {
-  value = local.abc
+output "name" {
+  value = local.name
 }
