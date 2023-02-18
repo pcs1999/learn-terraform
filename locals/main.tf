@@ -16,8 +16,8 @@ variable "components" {
 }
 
 locals {
-  instance_type = {for k, v in var.components : k=> v.instance_type }
-  abc = {for k, v in var.components : k=> v.abc }
+  instance_type = {for k, v in var.components : k => v.instance_type }
+  abc = {for k, v in var.components : k => v.abc }
 }
 
 output "instance_type" {
