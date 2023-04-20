@@ -22,7 +22,7 @@ resource "aws_instance" "firstec2" {
 terraform {
   backend "s3" {
     bucket = "terraform-19feb"
-    key    = "apirl/terraform.tfstate"
+    key    = "roboshop-infra/terraform.tfstate"
     region = "us-east-1"
   }
 }
