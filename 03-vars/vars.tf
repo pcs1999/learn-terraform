@@ -1,5 +1,5 @@
 variable "sample" {
-  chandra = "hyderabad"
+  default = "hyderabad"
 }
 
 output "location" {
