@@ -17,3 +17,11 @@ resource "aws_instance" "firstec2" {
     Name= "automachine"
   }
 }
+
+terraform {
+  backend "s3" {
+    bucket = "terraform-19feb"
+    key    = "apirl/terraform.tf"
+    region = "us-east-1"
+  }
+}
