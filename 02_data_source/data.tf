@@ -15,5 +15,5 @@ data "aws_instance" "foo" {
 }
 
 output "ser" {
-  value = data.aws_instance.foo
+  value = data.aws_instance.foo.public_ip
 }
