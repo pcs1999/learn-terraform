@@ -15,5 +15,5 @@ data "aws_instance" "foo" {
 }
 
 output "ser" {
-  value = data.aws_instance.ser
+  value = data.aws_instance.foo
 }
