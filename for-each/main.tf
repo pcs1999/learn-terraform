@@ -3,7 +3,7 @@ resource "aws_instance" "firstec2" {
   ami = data.aws_ami.example.id
   instance_type = each.value.instance_type
   tags = {
-    Name= each.value["name"]
+    Name= each.value.name
   }
 }
 data "aws_ami" "example" {
@@ -23,6 +23,12 @@ variable "component" {
       name= "catalogue"
       instance_type= "t2.micro"
     }
+  }
+}
+
+output "public_ip" {
+  value = {
+    for k,v in aws_instance.firstec2 : k=> v.public_ip
   }
 }
 
