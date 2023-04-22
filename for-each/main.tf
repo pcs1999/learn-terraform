@@ -27,6 +27,3 @@ variable "component" {
 }
 
 
-output "publicip" {
-  value = aws_instance.firstec2.public_ip
-}
