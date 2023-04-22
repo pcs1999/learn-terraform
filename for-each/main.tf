@@ -19,7 +19,7 @@ variable "component" {
       name= "cart"
       instance_type= "t3.micro"
     }
-    cart ={
+    catalogue ={
       name= "catalogue"
       instance_type= "t2.micro"
     }
