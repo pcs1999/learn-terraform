@@ -20,6 +20,9 @@ resource "aws_instance" "firstec2" {
 }
 
 resource "null_resource" "provision" {
+  triggers = {
+    instance_id = aws_instance.firstec2.id
+  }
 
   provisioner "remote-exec" {
     connection {
