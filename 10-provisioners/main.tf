@@ -22,7 +22,7 @@ resource "aws_instance" "firstec2" {
 
 resource "null_resource" "provision" {
 
-  provisioner "local-exec" {
+  provisioner "remote-exec" {
     connection {
       host = aws_instance.firstec2.public_ip
       user = "centos"
