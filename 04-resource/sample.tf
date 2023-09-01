@@ -21,7 +21,7 @@ resource "aws_instance" "firstec2" {
 
 terraform {
   backend "s3" {
-    bucket = "terraform-19feb"
+    bucket = "sep01"
     key    = "roboshop-infra/terraform.tfstate"
     region = "us-east-1"
   }
@@ -50,6 +50,6 @@ resource "aws_security_group" "allow_tls" {
   }
 
   tags = {
-    Name = "allow_tls"
+    Name = "created_from_tf"
   }
 }
