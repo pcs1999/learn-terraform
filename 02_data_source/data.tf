@@ -24,7 +24,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "augtfstatefile"
+    bucket = "sep02"
     key    = "roboshop-infra/terraform.tfstate"
     region = "us-east-1"
   }
