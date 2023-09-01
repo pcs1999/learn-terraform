@@ -53,3 +53,7 @@ resource "aws_security_group" "allow_tls" {
     Name = "created_from_tf"
   }
 }
+
+output "sg_out_id" {
+  value = aws_security_group.allow_tls
+}
