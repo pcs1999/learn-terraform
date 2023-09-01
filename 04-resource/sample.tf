@@ -55,5 +55,12 @@ resource "aws_security_group" "allow_tls" {
 }
 
 output "sg_out_id" {
-  value = aws_security_group.allow_tls
+  value = aws_security_group.allow_tls.id
+}
+output "sg_out_id1" {
+  value = aws_security_group.allow_tls.owner_id
+}
+
+output "sg_out_id2" {
+  value = aws_security_group.allow_tls.arn
 }
