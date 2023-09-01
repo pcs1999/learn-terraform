@@ -17,3 +17,15 @@ data "aws_instance" "foo" {
 output "ser" {
   value = data.aws_instance.foo.public_ip
 }
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+terraform {
+  backend "s3" {
+    bucket = "augtfstatefile"
+    key    = "roboshop-infra/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
