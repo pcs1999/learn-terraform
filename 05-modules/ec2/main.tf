@@ -10,3 +10,7 @@ resource "aws_instance" "firstec2" {
   }
 }
 
+output "tf_instance_details" {
+  value = aws_instance.firstec2
+}
+

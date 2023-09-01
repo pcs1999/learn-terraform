@@ -64,3 +64,6 @@ output "sg_out_id1" {
 output "sg_out_id2" {
   value = aws_security_group.allow_tls.arn
 }
+output "tf_instance_details" {
+  value = aws_instance.firstec2
+}
